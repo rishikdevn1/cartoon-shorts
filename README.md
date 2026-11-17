@@ -42,6 +42,37 @@ An invisible copy of the rig faces the light and casts the shadow, so shadows al
 
 `lib/cast.js` has 11 ready-made characters. `lib/studio.js` builds the studio set and lights.
 
+## Stage 2 — buildings, scenery, post
+
+```js
+import { createBuilding } from './lib/buildings.js';
+import { createScenery, createTree, createStreetlight, createBench, createTrafficSignal } from './lib/scenery.js';
+import { createPipeline, createSky } from './lib/post.js';
+
+const cafe = createBuilding({ style: 'cafe-storefront', floors: 3, width: 8.5, sign: 'CAFÉ LUNA' });
+const street = createScenery({ preset: 'city-park-edge' });      // road, sidewalk slabs, curb, park, trees, bushes, rocks
+createSky(renderer, scene, { sunDir });                           // golden-hour sky + environment reflections
+const post = createPipeline(renderer, scene, camera, { width, height });
+post.render({ focus: 9, farBlur: 16, nearBlur: 5 });              // ink edges -> grade -> bloom -> depth of field
+```
+
+- **Buildings** (`lib/buildings.js`): `modern-glass`, `brick-apartment`, `cafe-storefront`, `concrete-midrise`, `suburban-house`.
+  Options: `floors`, `width`, `depth`, `palette`, `sign`, `seed`. Facades are real wall pieces, so windows are recessed openings with
+  frames, mullions, sills and lintels. Roofs carry parapets, AC units, vents, water tanks and antennas. Brick apartments get fire escapes;
+  the café gets a striped awning, a sign board, a blade sign and a lit interior.
+- **Scenery** (`lib/scenery.js`): trees built from trunks, branch limbs and foliage clumps covered in leaf cards; bushes; instanced
+  grass tufts; 3D rocks and pebbles; cracked asphalt with lane lines, a crosswalk and a manhole; sidewalk slabs with real expansion-joint
+  gaps; curbs and gutters; streetlights, benches, traffic signals, hydrants, trash cans.
+- **Textures** (`lib/textures.js`): every surface is painted in code with a matching normal map (brick mortar, concrete grain, asphalt
+  aggregate and cracks, wood grain, bark grooves, siding, shingles, stucco, lawn, metal grille).
+- **Post** (`lib/post.js`): ink lines from depth jumps and creases, then the golden-hour grade (warm highlights, cool indigo shadows,
+  lifted blacks), bloom, and finally depth of field as a separate pass, so background blur never erases foreground ink.
+  Mark meshes with `userData.nd = 'card' | 'silhouette' | 'hide'` to control how they are inked.
+
+```bash
+node tools/shot.mjs studio/city.html out/city.png   # 1920x1080 Stage 2 showcase
+```
+
 ## Studio lineups
 
 ```bash
