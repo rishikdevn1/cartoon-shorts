@@ -1,0 +1,22 @@
+{
+  "name": "viral-3d-shorts",
+  "private": true,
+  "type": "module",
+  "description": "Approved Three.js + Remotion asset library for animated Shorts: 2D characters in a lit, inked 3D world",
+  "scripts": {
+    "showcase": "node tools/shot.mjs examples/city.html out/city.png",
+    "showcase:night": "node tools/shot.mjs 'examples/city.html?preset=night' out/city-night.png",
+    "lineup": "node tools/shot.mjs 'examples/lineup.html?set=a' out/lineup_a.png && node tools/shot.mjs 'examples/lineup.html?set=b' out/lineup_b.png",
+    "studio": "remotion studio remotion/index.jsx",
+    "render": "remotion render remotion/index.jsx CharacterShowcase out/showcase.mp4 --gl=swangle"
+  },
+  "dependencies": {
+    "three": "0.160.0",
+    "remotion": "4.0.242",
+    "@remotion/cli": "4.0.242",
+    "@remotion/three": "4.0.242",
+    "@react-three/fiber": "8.17.10",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

@@ -1,0 +1,26 @@
+// Ready-made cast presets. Pass any of these to createCharacter(), or use them as starting points.
+// Skin tones span light to deep; outfits use varied, vibrant colours.
+export const CAST = [
+  { name: 'Maya', role: 'Casual tee · holding coffee', outfit: 'casual', type: 'tee', hair: 'ponytail', expression: 'smug_happy', pose: 'holding_prop', prop: 'coffee', height: 1.66, lashes: true,
+    palette: { skin: '#f3c9a7', hair: '#5a3220', top: '#18b7a0', bottom: '#3f5f9e', shoes: '#ffffff', accent: '#ffcf4a', eyes: '#5a3a1e' } },
+  { name: 'Mr. Grant', role: 'Suit · holding money', outfit: 'suit', hair: 'sidepart', expression: 'scheming', pose: 'holding_prop', prop: 'money', height: 1.82, glasses: true,
+    palette: { skin: '#e8ad84', hair: '#94949e', top: '#2b4c9b', bottom: '#2b4c9b', shoes: '#2a1e1a', accent: '#e2333b' } },
+  { name: 'Officer Diaz', role: 'Police uniform · standing', outfit: 'uniform', type: 'police', hair: 'short', headwear: 'cap', expression: 'furious_steam', gesture: 'point', height: 1.78, mustache: true,
+    palette: { skin: '#9a6038', hair: '#1e1716', top: '#3f6fd0', bottom: '#253a63', shoes: '#1b1b22', accent: '#f2c23c', hat: '#253a63', badge: '#f2c23c' } },
+  { name: 'Chef Nico', role: 'Chef · sitting, legs dangling', outfit: 'uniform', type: 'chef', hair: 'short', headwear: 'chefhat', expression: 'laughing', pose: 'sitting_dangling_legs', height: 1.72, mustache: true,
+    palette: { skin: '#efbf98', hair: '#2b1d14', top: '#ffffff', bottom: '#3a3a44', shoes: '#1b1b22', accent: '#e8333b', coat: '#ffffff' } },
+  { name: 'Prof. Hale', role: 'Victorian · hat launch', outfit: 'historical', type: 'victorian', hair: 'bald', headwear: 'tophat', expression: 'bug_eyed_shock', hatLaunch: true, gesture: 'armsUp', height: 1.76, mustache: true,
+    palette: { skin: '#f6d3b8', hair: '#c9c9cf', top: '#7a3fa6', bottom: '#2a2530', shoes: '#2a1e1a', accent: '#e23a2a', hat: '#b02a2a', coat: '#6c3696' } },
+  { name: 'Grandpa Joe', role: 'Cardigan · leaning on cane', outfit: 'casual', type: 'cardigan', hair: 'bald', expression: 'deadpan', pose: 'leaning_on_cane', height: 1.64, glasses: true, beard: true,
+    palette: { skin: '#c08250', hair: '#f4f4f4', top: '#e0a020', bottom: '#5a5048', shoes: '#4a3020', accent: '#d8343b', shirt: '#f4ede0' } },
+  { name: 'Kenji', role: 'Hoodie · holding wrench', outfit: 'casual', type: 'hoodie', hair: 'spiky', expression: 'nervous_sweat', pose: 'holding_prop', prop: 'wrench', height: 1.7,
+    palette: { skin: '#f4cfa8', hair: '#151216', top: '#ff7a1a', bottom: '#2e3348', shoes: '#ffffff', accent: '#2f6fd6' } },
+  { name: 'Dr. Amara', role: 'Doctor · reading the paper', outfit: 'uniform', type: 'doctor', hair: 'bun', expression: 'deadpan', pose: 'holding_prop', prop: 'newspaper', height: 1.7, glasses: true, lashes: true,
+    palette: { skin: '#74452a', hair: '#1e1716', top: '#3fb6d9', bottom: '#2e3a52', shoes: '#ffffff', accent: '#ff4f7a', coat: '#f7f7f4', eyes: '#2a1a12' } },
+  { name: 'Queen Elise', role: 'Medieval gown · gritted teeth', outfit: 'historical', type: 'medieval', hair: 'long', headwear: 'crown', expression: 'gritted_teeth', gesture: 'hips', height: 1.72, lashes: true,
+    palette: { skin: '#f6d3b8', hair: '#e0b25a', top: '#2f63d8', bottom: '#2f63d8', shoes: '#6a2c8a', accent: '#f2c23c', eyes: '#2f6fd6' } },
+  { name: 'Zoe', role: 'Casual tee · cheering', outfit: 'casual', type: 'tee', hair: 'afro', expression: 'smug_happy', gesture: 'cheer', height: 1.6, lashes: true,
+    palette: { skin: '#553220', hair: '#120e0d', top: '#ff4f86', bottom: '#2f2f3f', shoes: '#ffd23a', accent: '#ffffff', eyes: '#2a1a12' } },
+  { name: 'Marcus', role: 'Roman · laughing', outfit: 'historical', type: 'roman', hair: 'curly', headwear: 'laurel', expression: 'laughing', gesture: 'belly', height: 1.74, beard: true,
+    palette: { skin: '#d9a072', hair: '#3b2414', top: '#f4ead2', bottom: '#f4ead2', accent: '#d42a36' } },
+];
