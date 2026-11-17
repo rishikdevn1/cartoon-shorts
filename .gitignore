@@ -1,0 +1,3 @@
+node_modules/
+out/*
+!out/character-lineup-v1.png

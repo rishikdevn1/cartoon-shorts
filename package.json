@@ -1,0 +1,7 @@
+{
+  "name": "cartoon-shorts",
+  "private": true,
+  "type": "module",
+  "description": "Reusable Three.js asset library for 2D-characters-in-3D-world animated Shorts",
+  "dependencies": { "three": "0.160.0" }
+}
