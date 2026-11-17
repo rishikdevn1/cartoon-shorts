@@ -1,3 +1,6 @@
 node_modules/
 out/*
 !out/character-lineup-v1.png
+!out/character-lineup-v2-a.png
+!out/character-lineup-v2-b.png
+!out/showcase.mp4

@@ -3,5 +3,19 @@
   "private": true,
   "type": "module",
   "description": "Reusable Three.js asset library for 2D-characters-in-3D-world animated Shorts",
-  "dependencies": { "three": "0.160.0" }
+  "dependencies": {
+    "@react-three/fiber": "8.17.10",
+    "@remotion/cli": "4.0.242",
+    "@remotion/three": "4.0.242",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.242",
+    "three": "0.160.0"
+  },
+  "scripts": {
+    "lineup": "node tools/shot.mjs 'studio/lineup.html?set=a' out/lineup_a.png && node tools/shot.mjs 'studio/lineup.html?set=b' out/lineup_b.png",
+    "studio": "remotion studio remotion/index.jsx",
+    "render": "remotion render remotion/index.jsx CharacterShowcase out/showcase.mp4 --gl=swangle",
+    "still": "remotion still remotion/index.jsx CharacterShowcase out/remotion_still.png --frame=100 --gl=swangle"
+  }
 }
