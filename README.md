@@ -61,7 +61,7 @@ post.render({ focus: 9, farBlur: 16, nearBlur: 5 });              // ink edges -
   frames, mullions, sills and lintels. Roofs carry parapets, AC units, vents, water tanks and antennas. Brick apartments get fire escapes;
   the café gets a striped awning, a sign board, a blade sign and a lit interior.
 - **Scenery** (`lib/scenery.js`): trees built from trunks, branch limbs and foliage clumps covered in leaf cards; bushes; instanced
-  grass tufts; 3D rocks and pebbles; cracked asphalt with lane lines, a crosswalk and a manhole; sidewalk slabs with real expansion-joint
+  grass tufts; 3D rocks and pebbles (foliage is smooth 3-step cel shading with a golden sun rim — call setFoliageSun(camera, sunDir)); cracked asphalt with lane lines, a crosswalk and a manhole; sidewalk slabs with real expansion-joint
   gaps; curbs and gutters; streetlights, benches, traffic signals, hydrants, trash cans.
 - **Textures** (`lib/textures.js`): every surface is painted in code with a matching normal map (brick mortar, concrete grain, asphalt
   aggregate and cracks, wood grain, bark grooves, siding, shingles, stucco, lawn, metal grille).
